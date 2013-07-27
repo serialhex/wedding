@@ -1,8 +1,10 @@
 body {
+    padding-top: 100px;
     color: black;
     font-size: 16px;
     margin: 0px auto 0px auto;
-    width: 600px;
+    width: 80%;
+    background-color: purple;
 }
 
 div#header {
@@ -38,7 +40,7 @@ div#footer {
     font-size: 12px;
     margin-top: 30px;
     padding: 12px 0px 12px 0px;
-    text-align: right;
+    text-align: center;
 }
 
 h1 {
