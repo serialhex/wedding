@@ -4,34 +4,30 @@ body {
     font-size: 16px;
     margin: 0px auto 0px auto;
     width: 80%;
-    background-color: purple;
+    font-family: 'Antic Slab', serif;
 }
 
 div#header {
-    border-bottom: 2px solid black;
     margin-bottom: 30px;
     padding: 12px 0px 12px 0px;
+    text-align: center;
 }
 
 div#logo a {
     color: black;
-    float: left;
-    font-size: 18px;
+    font-size: 52px;
     font-weight: bold;
     text-decoration: none;
+    font-family: 'Tangerine', cursive;
 }
 
-div#header #navigation {
-    text-align: right;
-}
-
-div#header #navigation a {
+div#navigation a {
+    text-align: center;
     color: black;
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 24px;
     margin-left: 12px;
     text-decoration: none;
-    text-transform: uppercase;
+    font-family: 'Lobster Two', cursive;
 }
 
 div#footer {
@@ -52,7 +48,15 @@ h2 {
 }
 
 div.info {
-    color: #555;
+    color: #777;
     font-size: 14px;
     font-style: italic;
+}
+
+#countdown {
+    font-size: 72px;
+    color: blue;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Sonsie One', cursive;
 }
