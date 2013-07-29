@@ -1,10 +1,11 @@
 body {
+    /*background-image:url('/images/bamboo3.png');*/
     padding-top: 100px;
     color: black;
     font-size: 16px;
     margin: 0px auto 0px auto;
     width: 80%;
-    font-family: 'Antic Slab', serif;
+    font-family: 'Basic', sans-serif;
 }
 
 div#header {
@@ -58,5 +59,5 @@ div.info {
     color: blue;
     text-align: center;
     font-weight: bold;
-    font-family: 'Sonsie One', cursive;
+    /*font-family: 'Sonsie One', cursive;*/
 }

@@ -1,6 +1,7 @@
 ---
-title: bridal party
-date: moo
+title: Bridal Party
 ---
 
-YAY!!!
+John and Jon and Justin and other semi-important people...
+
+oh, and theres gonna be a *PARTAY!!!!*

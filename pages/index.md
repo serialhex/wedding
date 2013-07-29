@@ -2,14 +2,11 @@
 title: Home
 ---
 
-<h2>Welcome</h2>
-
 <script>
 
     CountDownTimer('09/27/2013 6:00 PM', 'countdown');
 
-    function CountDownTimer(dt, id)
-    {
+    function CountDownTimer(dt, id) {
         var end = new Date(dt);
 
         var _second = 1000;
@@ -22,10 +19,8 @@ title: Home
             var now = new Date();
             var distance = end - now;
             if (distance < 0) {
-
                 clearInterval(timer);
-                document.getElementById(id).innerHTML = 'EXPIRED!';
-
+                document.getElementById(id).innerHTML = 'WED WE SHALL BE!';
                 return;
             }
             var days = Math.floor(distance / _day);
@@ -33,10 +28,10 @@ title: Home
             var minutes = Math.floor((distance % _hour) / _minute);
             var seconds = Math.floor((distance % _minute) / _second);
 
-            document.getElementById(id).innerHTML = days + 'days ';
-            document.getElementById(id).innerHTML += hours + 'hours ';
-            document.getElementById(id).innerHTML += minutes + 'minutes ';
-            document.getElementById(id).innerHTML += seconds + 'seconds';
+            document.getElementById(id).innerHTML = days     + ' days ';
+            document.getElementById(id).innerHTML += hours   + ' hours ';
+            document.getElementById(id).innerHTML += minutes + ' minutes ';
+            document.getElementById(id).innerHTML += seconds + ' seconds';
         }
 
         timer = setInterval(showRemaining, 1000);
@@ -45,4 +40,4 @@ title: Home
 </script>
 <div id="countdown"></div>
 
-Lorem Ipsum D0llar menu penuckle kangafoo-fu purple orange sasquach pickle salmon apricot in shoe llama zen monkey fork
+Lorem Ipsum D0llar menu penuckle kangaroo-fu purple orange sasquach pickle salmon apricot in shoe llama zen monkey fork
