@@ -1,5 +1,6 @@
 ---
 title: Home
+image: mainpage.png
 ---
 
 <script>
@@ -38,6 +39,6 @@ title: Home
     }
 
 </script>
-<div id="countdown"></div>
+<div id="countdown" class="strokeme"></div>
 
 Lorem Ipsum D0llar menu penuckle kangaroo-fu purple orange sasquach pickle salmon apricot in shoe llama zen monkey fork

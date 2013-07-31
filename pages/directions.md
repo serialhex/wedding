@@ -1,5 +1,6 @@
 ---
 title: Directions
+image: directions.png
 ---
 
 <!-- move this somewhere nice later -->

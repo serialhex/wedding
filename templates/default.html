@@ -17,24 +17,30 @@
 
         <div id="header">
             <div id="logo">
-                <a href="/">Megan &amp; Justin's Wedding - $title$</a>
+                <img src="/images/$image$">
+                <!-- <a href="/">Megan &amp; Justin's Wedding - $title$</a> -->
             </div>
+            <!-- http://css-tricks.com/text-blocks-over-image/ -->
+            <!-- http://stackoverflow.com/questions/8708945/how-to-position-text-over-an-image-in-css -->
             <div id="navigation">
-                <a href="/">Home</a>
-                <a href="/bridal-party.html">Bridal Party</a>
-                <a href="/rsvp.html">RSVP</a>
-                <a href="/registries.html">Registries</a>
-                <a href="/directions.html">Directions</a>
+                <img id="bg-img" src="/images/bar.png">
+                <div id="links">
+                    <a href="/">Home</a>
+                    <a href="/directions.html">Directions</a>
+                    <a href="/rsvp.html">RSVP</a>
+                    <a href="/bridal-party.html">Bridal Party</a>
+                    <a href="/registries.html">Registries</a>
+                </div>
             </div>
         </div>
 
-        <div id="content">
-            <h1>$title$</h1>
+        <div id="content" class="alpha60 rounded">
+            <!-- <h1>$title$</h1> -->
 
             $body$
         </div>
 
-        <div id="footer">
+        <div id="footer" class="alpha60 rounded">
             Questions, comments, concerns, complaints?  Mail us!
 
             <!-- ultra-hide!!! -->

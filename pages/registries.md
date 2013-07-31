@@ -1,5 +1,6 @@
 ---
 title: Registries
+image: registries.png
 ---
 
 Show us how much you love us by buying us stuff!!!  

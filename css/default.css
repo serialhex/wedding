@@ -1,6 +1,6 @@
 body {
-    /*background-image:url('/images/bamboo3.png');*/
-    padding-top: 100px;
+    background-image:url('/images/bamboo3.png'),url('/images/bamboo2.png'),url('/images/bamboo1.png');
+    padding-top: 0px;
     color: black;
     font-size: 16px;
     margin: 0px auto 0px auto;
@@ -9,8 +9,7 @@ body {
 }
 
 div#header {
-    margin-bottom: 30px;
-    padding: 12px 0px 12px 0px;
+    padding: 0px 0px 0px 0px;
     text-align: center;
 }
 
@@ -19,24 +18,50 @@ div#logo a {
     font-size: 52px;
     font-weight: bold;
     text-decoration: none;
-    font-family: 'Tangerine', cursive;
+    /*font-family: 'Tangerine', cursive;*/
+}
+
+div#navigation {
+    position: relative;
+    text-align: center;
+    height: 55px;
+    width: 100%
+    background-image:url('/images/bar.png')
+}
+
+div#bg-img {
+    width: 100%;
+}
+
+div#links {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    line-height: 48px;
+    width: 100%;
+    vertical-align: middle;
+    font-weight:bold;
 }
 
 div#navigation a {
-    text-align: center;
-    color: black;
-    font-size: 24px;
+    /*text-align: center;*/
+    /*line-height: 55px;*/
+    color: #330066;
+    font-size: 20px;
     margin-left: 12px;
+    margin-right: 17px;
     text-decoration: none;
     font-family: 'Lobster Two', cursive;
 }
 
 div#footer {
     border-top: solid 2px black;
-    color: #555;
+    color: #333;
+    width: 25%;
     font-size: 12px;
+    margin: 0 auto;
     margin-top: 30px;
-    padding: 12px 0px 12px 0px;
+    /*padding: 12px 0px 12px 0px;*/
     text-align: center;
 }
 
@@ -56,8 +81,36 @@ div.info {
 
 #countdown {
     font-size: 72px;
-    color: blue;
+    color: white;
+    /*color: #cc99ff;*/
     text-align: center;
     font-weight: bold;
+    font-family: 'Tangerine', cursive;
     /*font-family: 'Sonsie One', cursive;*/
+}
+
+.strokeme {
+    color: white;
+    text-shadow:
+    -1px -1px 0 #330066,
+    1px -1px 0 #330066,
+    -1px 1px 0 #330066,
+    1px 1px 0 #330066;
+}
+
+.alpha60 {
+    /* Fallback for web browsers that doesn't support RGBa */
+    background: rgb(204, 153, 255) transparent;
+    /* RGBa with 0.6 opacity */
+    background: rgba(204, 153, 255, 0.4);
+    /* For IE 5.5 - 7*/
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+    /* For IE 8*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+}
+
+.rounded {
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    padding: 5px;
 }
