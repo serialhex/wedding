@@ -3,11 +3,6 @@ title: Directions
 image: directions.png
 ---
 
-<!-- move this somewhere nice later -->
-<style type="text/css">
-  /*#map-canvas { height: 480px; width: 640px; }*/
-</style>
-
 <!-- loads the maps api script -->
 <script type="text/javascript"
   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDiRQvTgbqeyWfx0LKgcVTibwvUnrt77rQ&sensor=false">
@@ -18,7 +13,8 @@ image: directions.png
   var geocoder;
   var map;
   var directionsService = new google.maps.DirectionsService();
-  var latlng;
+  var plaza = geocode('The Plaza, 884 17th St  Vero Beach, FL 32960');
+  var ccvb = geocode('Cavalry Chapel, 941 18th St, Vero Beach, FL 32960');
   var directionsDisplay;
 
   function initialize() {
@@ -26,8 +22,8 @@ image: directions.png
     directionsDisplay = new google.maps.DirectionsRenderer();
     geocode();
     var mapOptions = {
-      center: latlng,
-      zoom: 17,
+      center: ccvb,
+      zoom: 18,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };
     map = new google.maps.Map(document.getElementById("map-canvas"),
@@ -36,17 +32,17 @@ image: directions.png
     directionsDisplay.setPanel(document.getElementById("directionsPanel"));
   }
 
-  function geocode() {
+  function geocode(loc) {
     geocoder = new google.maps.Geocoder();
     // var latlng = new google.maps.LatLng(27.633866, -80.393003);
-    geocoder.geocode( { 'address': 'Cavalry Chapel, 941 18th St, Vero Beach, FL'}, function(results, status) {
+    geocoder.geocode( { 'address': loc}, function(results, status) {
       map.setCenter(results[0].geometry.location);
       var marker = new google.maps.Marker({
           map: map,
           position: results[0].geometry.location
       });
       loc = results[0].geometry.location;
-      latlng = new google.maps.LatLng(loc.lat(), loc.lng());
+      // latlng = new google.maps.LatLng(loc.lat(), loc.lng());
     });
   }
 
@@ -54,7 +50,7 @@ image: directions.png
     var start = document.getElementById("start").value;
     var request = {
       origin: start,
-      destination: latlng,
+      destination: ccvb,
       travelMode: google.maps.TravelMode.DRIVING
     };
     directionsService.route(request, function(result, status) {
@@ -70,8 +66,11 @@ image: directions.png
 
 <!-- the good stuff... -->
 
+<!-- directions -->
+<!-- http://www.sitepoint.com/find-a-route-using-the-geolocation-and-the-google-maps-api/ -->
+
 # AHHHHHHHHHHHHH!!!!!!!!
 UR GOIN THE RONG WAY!!!!!
 
-<div id="map-canvas" style="float:left;width:70%; height:480px"/>
-<div id="directionsPanel" style="float:right;width:30%;height: 480px"/>
+<div id="directionsPanel"/>
+<div id="map-canvas" class="map"/>

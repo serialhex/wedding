@@ -6,19 +6,31 @@ import           Hakyll
 
 --------------------------------------------------------------------------------
 main :: IO ()
-main = hakyll $ do
+main = hakyllWith config $ do
     match "images/*" $ do
         route   idRoute
         compile copyFileCompiler
 
     match "css/*" $ do
         route   idRoute
-        compile compressCssCompiler
+        compile $ compressCssCompiler
+            >>= relativizeUrls
+
+    match "cgi/*" $ do
+        route   $ gsubRoute "cgi/" (const "wedding/")
+        compile copyFileCompiler
 
     match "pages/*" $ do
-        route   $ gsubRoute "pages/" (const "") `composeRoutes` setExtension "html"
+        route   $ gsubRoute "pages/" (const "wedding/") `composeRoutes` setExtension "html"
         compile $ pandocCompiler
             >>= loadAndApplyTemplate "templates/default.html" defaultContext
             >>= relativizeUrls
 
     match "templates/*" $ compile templateCompiler
+
+--------------------------------------------------------------------------------
+config :: Configuration
+config = defaultConfiguration
+    { deployCommand = "rsync --checksum -rv \
+                      \_site/* serialhex_serialhex@ssh.phx.nearlyfreespeech.net:/home/public/"
+    }
