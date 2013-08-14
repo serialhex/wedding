@@ -1,8 +1,8 @@
 ---
 title: Bridal Party
-image: bridal-party.png
+image: bridalParty.png
 ---
 
-John and Jon and Justin and other semi-important people...
+# Coming soon...
 
-oh, and theres gonna be a *PARTAY!!!!*
+so very, very soon.........

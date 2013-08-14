@@ -29,16 +29,18 @@ image: mainpage.png
             var minutes = Math.floor((distance % _hour) / _minute);
             var seconds = Math.floor((distance % _minute) / _second);
 
+            // document.getElementById(id).innerHTML = 'Countdown to the wedding:<br>'
             document.getElementById(id).innerHTML = days     + ' days ';
             document.getElementById(id).innerHTML += hours   + ' hours ';
             document.getElementById(id).innerHTML += minutes + ' minutes ';
-            document.getElementById(id).innerHTML += seconds + ' seconds';
+            document.getElementById(id).innerHTML += seconds + ' seconds</div>';
         }
 
         timer = setInterval(showRemaining, 1000);
     }
 
 </script>
-<div id="countdown" class="strokeme"></div>
+<div id="countdown-txt" class="strokeme count">Countdown to the wedding:<br></div>
+<div id="countdown" class="strokeme count">loading...</div>
 
-Lorem Ipsum D0llar menu penuckle kangaroo-fu purple orange sasquach pickle salmon apricot in shoe llama zen monkey fork
+Welcome to Justin and Megan's Wedding Website. Feel free to browse the site whenever you need a refresher on time or place or to get an idea of what to give us for a gift. If you have any questions either ask us in person or click on either email at the bottom of the pages to send us a note. We hope to see you at the Party!

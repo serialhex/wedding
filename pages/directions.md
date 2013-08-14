@@ -1,6 +1,6 @@
 ---
 title: Directions
-image: directions.png
+image: map.png
 ---
 
 <!-- loads the maps api script -->
@@ -13,14 +13,17 @@ image: directions.png
   var geocoder;
   var map;
   var directionsService = new google.maps.DirectionsService();
-  var plaza = geocode('The Plaza, 884 17th St  Vero Beach, FL 32960');
-  var ccvb = geocode('Cavalry Chapel, 941 18th St, Vero Beach, FL 32960');
+  var plaza;
+  var ccvb;
   var directionsDisplay;
 
   function initialize() {
-    var loc;
+    // var loc;
+    plaza = geocode('The Plaza, 884 17th St  Vero Beach, FL 32960');
+    ccvb = geocode('Cavalry Chapel, 941 18th St, Vero Beach, FL 32960');
+
     directionsDisplay = new google.maps.DirectionsRenderer();
-    geocode();
+    // geocode();
     var mapOptions = {
       center: ccvb,
       zoom: 18,
@@ -30,19 +33,20 @@ image: directions.png
         mapOptions);
     directionsDisplay.setMap(map);
     directionsDisplay.setPanel(document.getElementById("directionsPanel"));
+
+    console.log(ccvb);
+    map.setCenter(ccvb.location);
   }
 
   function geocode(loc) {
     geocoder = new google.maps.Geocoder();
-    // var latlng = new google.maps.LatLng(27.633866, -80.393003);
     geocoder.geocode( { 'address': loc}, function(results, status) {
       map.setCenter(results[0].geometry.location);
       var marker = new google.maps.Marker({
           map: map,
           position: results[0].geometry.location
       });
-      loc = results[0].geometry.location;
-      // latlng = new google.maps.LatLng(loc.lat(), loc.lng());
+      return results[0];
     });
   }
 
@@ -69,8 +73,16 @@ image: directions.png
 <!-- directions -->
 <!-- http://www.sitepoint.com/find-a-route-using-the-geolocation-and-the-google-maps-api/ -->
 
-# AHHHHHHHHHHHHH!!!!!!!!
-UR GOIN THE RONG WAY!!!!!
+Ceremony:  
+Calvary Chapel, 941 18th St, Vero Beach  
+
+Reception:  
+The Plaza, 884 17th St  Vero Beach  
+
+Ceremony is at 6pm on Friday September 27th at Calvary Chapel, Vero Beach.  The reception will be at The Plaza, right around the corner from the chapel at 6:30pm or so.  
+
+*Remember to drop off you dish at the Plaza before joining us for the ceremony at 6*
+
 
 <div id="directionsPanel"/>
 <div id="map-canvas" class="map"/>

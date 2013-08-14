@@ -26,11 +26,15 @@ main = hakyllWith config $ do
             >>= loadAndApplyTemplate "templates/default.html" defaultContext
             >>= relativizeUrls
 
+    match "index.html" $ do
+        route idRoute
+        compile copyFileCompiler
+
     match "templates/*" $ compile templateCompiler
 
 --------------------------------------------------------------------------------
 config :: Configuration
 config = defaultConfiguration
     { deployCommand = "rsync --checksum -rv \
-                      \_site/* serialhex_serialhex@ssh.phx.nearlyfreespeech.net:/home/public/"
+                      \_site/* menixon_ninjaartist@ssh.phx.nearlyfreespeech.net:/home/public/"
     }

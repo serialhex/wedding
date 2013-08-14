@@ -1,12 +1,38 @@
 body {
-    background-image:url('/images/bamboo3.png'),url('/images/bamboo2.png'),url('/images/bamboo1.png');
+    background-image:url('/images/bamboo3-sm.png'),url('/images/bamboo2-sm.png'),url('/images/bamboo1-sm.png');
     padding-top: 0px;
     color: black;
-    font-size: 16px;
+    font-size: 20px;
     margin: 0px auto 0px auto;
     width: 80%;
     font-family: 'Basic', sans-serif;
 }
+
+/* for the *one* table I use on the wedding site */
+table {
+    margin-right: auto;
+    margin-left: auto;
+    width: 70%;
+    text-align: center;
+}
+
+td {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+a:link {color:#2b2bad;}
+a:visited {color:#2b2bad;}
+a:hover {color:#4b2369;}
+a:active {color:#4b2369;}
 
 div#header {
     padding: 0px 0px 0px 0px;
@@ -61,26 +87,29 @@ div#footer {
     text-align: center;
 }
 
-h1 {
-    font-size: 24px;
-}
-
-h2 {
-    font-size: 20px;
-}
-
 div.info {
     color: #777;
     font-size: 14px;
     font-style: italic;
 }
 
-#countdown {
-    font-size: 72px;
+.count {
     color: white;
     text-align: center;
-    font-weight: bold;
+}
+
+#countdown {
+    font-size: 50px;
+    font-family: 'Lobster Two', cursive;
+}
+
+#countdown-txt {
+    font-size: 72px;
     font-family: 'Tangerine', cursive;
+}
+
+#content {
+    padding: 20px;
 }
 
 .strokeme {
@@ -96,7 +125,7 @@ div.info {
     /* Fallback for web browsers that doesn't support RGBa */
     background: rgb(204, 153, 255) transparent;
     /* RGBa with 0.6 opacity */
-    background: rgba(204, 153, 255, 0.4);
+    background: rgba(204, 153, 255, 0.6);
     /* For IE 5.5 - 7*/
     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
     /* For IE 8*/
@@ -116,6 +145,3 @@ div.info {
     height:480px;
 }
 
-#content {
-    padding: 20px;
-}
