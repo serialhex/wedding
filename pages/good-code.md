@@ -3,4 +3,4 @@ title: Awesome!!
 image: rsvp.png
 ---
 
-good code filler...
+Awesome!!!  You have now accepted (or declined) our invitation!  Thank you!!!
